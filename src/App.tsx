@@ -1,56 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
+import blueprint from "../src/assets/img/blueprint.jpg";
+import { Silo } from "./features/silo/Silo";
+import { Mixer } from "./features/mixer/Mixer";
+import { Storage } from "./features/storage/Storage";
+import { Press } from "./features/press/Press";
+import { Autoclave } from "./features/autoclave/Autoclave";
+import { Dryer } from "./features/dryer/Dryer";
+import {Saw} from "./features/saw/Saw";
+import { Packaging } from "./features/packaging/Packaging";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
+        <img src={blueprint} className="App-logo" alt="logo" />
       </header>
+      <nav>
+        <Silo />
+        <Mixer />
+        <Storage />
+        <Press />
+        <Autoclave />
+        <Dryer />
+        <Saw />
+        <Packaging />
+      </nav>
     </div>
   );
 }
