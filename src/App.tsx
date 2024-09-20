@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import blueprint from "../src/assets/img/blueprint.jpg";
 import { Silo } from "./features/silo/Silo";
 import { Mixer } from "./features/mixer/Mixer";
@@ -14,18 +15,19 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>Welcome to your production capacity calculator</h1>
         <img src={blueprint} className="App-logo" alt="logo" />
       </header>
-      <nav>
-        <Silo />
-        <Mixer />
-        <Storage />
-        <Press />
-        <Autoclave />
-        <Dryer />
-        <Saw />
-        <Packaging />
-      </nav>
+      <Routes>
+          <Route path="/silo" element={<Silo />} />
+          <Route path="/mixer" element={<Mixer />} />
+          <Route path="/storage" element={<Storage />} />
+          <Route path="/press" element={<Press />} />
+          <Route path="/autoclave" element={<Autoclave />} />
+          <Route path="/dryer" element={<Dryer />} />
+          <Route path="/saw" element={<Saw />} />
+          <Route path="/packaging" element={<Packaging />} />
+        </Routes>
     </div>
   );
 }
